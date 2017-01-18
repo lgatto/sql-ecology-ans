@@ -58,8 +58,8 @@ If we want to group by multiple fields, we give `GROUP BY` a comma separated lis
 >
 > Write queries that return:
 >
-> 1. How many individuals were counted in each year: (a) in total; (b)
->    per each species.
+> How many individuals were counted in each year: (a) in total; (b)
+> per each species.
 
 **SOLUTION** 
 
@@ -74,7 +74,7 @@ If we want to group by multiple fields, we give `GROUP BY` a comma separated lis
     FROM surveys 
     GROUP BY year, species_id;
 
-> 2. Average weight of each species in each year.
+> Average weight of each species in each year.
 
 **SOLUTION** 
 
