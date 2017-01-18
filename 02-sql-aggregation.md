@@ -193,18 +193,17 @@ Now, we will be able to access these results with a much shorter notation:
 **SOLUTION**
 
 	SELECT species_id, year, COUNT(species_id)
-	FROM survey
-	GROUP BY year species_id
-	ORDER BY year DESC, COUNT(species_id) DESC
-
-**SOLUTION**
-
-	SELECT year, species_id, COUNT(*)
 	FROM surveys
 	GROUP BY year, species_id
-	ORDER BY year DESC, COUNT(*) DESC;
+	ORDER BY year DESC, COUNT(species_id) DESC
 
 > Save this query as a `VIEW`.
+
+	CREATE VIEW sp_by_yr_ordered AS
+	SELECT species_id, year, COUNT(species_id)
+	FROM surveys
+	GROUP BY year, species_id
+	ORDER BY year DESC, COUNT(species_id) DESC
 
 ## Null values
 
