@@ -227,8 +227,9 @@ would add the `NOT` keyword to our query.
     FROM summer_2000
     WHERE species_id IS NOT NULL
 
-There are many hidden "gotchas" with NULL values.  If we restrict our 
-query to the "PE" species, this will be easier to see: 
+There are many hidden "gotchas" with NULL values.  If we restrict our
+query to the "PE" species (`=` or `==` work), this will be easier to
+see:
 
     SELECT *
     FROM summer_2000
