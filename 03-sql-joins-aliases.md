@@ -114,7 +114,12 @@ could do something like
 > Write a query that finds the average weight of each rodent species
 > (i.e., only include species with Rodent in the taxa field).
 
-
+    SELECT species.species_id, surveys.weight
+	FROM species
+	JOIN surveys ON species.species_id == surveys.species_id
+	WHERE species.taxa = 'Rodent'
+	GROUP BY species.species_id
+	
 ## Functions
 
 SQL includes numerous functions for manipulating data. You've already seen some
