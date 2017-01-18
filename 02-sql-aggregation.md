@@ -63,9 +63,16 @@ If we want to group by multiple fields, we give `GROUP BY` a comma separated lis
 
 **SOLUTION** 
 
+    -- (a) in total
 	SELECT year, COUNT(*)
 	FROM surveys
 	GROUP BY year;
+
+
+    --- (b) per each species
+    SELECT year, species_id, COUNT(*)
+    FROM surveys 
+    GROUP BY year, species_id;
 
 > 2. Average weight of each species in each year.
 
