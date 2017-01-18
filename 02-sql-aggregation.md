@@ -127,7 +127,16 @@ of these groups (`HAVING`).
 > `genus` in each `taxa`, only for the `taxa` with more than 10
 > `genus`.
 
+    -- first attempt
+    SELECT genus, taxa, count(genus) 
+	FROM species 
+	GROUP BY taxa 
 
+    -- Refine query
+    SELECT genus, taxa, count(genus) AS n 
+	FROM species 
+	GROUP BY taxa 
+	HAVING n > 10
 
 ## Ordering aggregated results.
 
