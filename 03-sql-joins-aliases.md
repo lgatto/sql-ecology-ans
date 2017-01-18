@@ -149,6 +149,10 @@ The lone "sex" column is only included in the query above to illustrate where
 > Write a query that calculates the average hind-foot length of each species,
 > assuming that unknown lengths are 30 (as above).
 
+	SELECT species_id, AVG(IFNULL(hindfoot_length, 30)), AVG(hindfoot_length)
+	FROM surveys
+	GROUP BY species_id
+
 `IFNULL` can be particularly useful in `JOIN`. When joining the `species` and
 `surveys` tables earlier, some results were excluded because the `species_id`
 was `NULL`. We can use `IFNULL` to include them again, re-writing the `NULL` to
