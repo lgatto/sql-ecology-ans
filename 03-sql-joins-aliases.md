@@ -141,6 +141,9 @@ The lone "sex" column is only included in the query above to illustrate where
 > Write a query that returns 30 instead of `NULL` for values in the
 > `hindfoot_length` column.
 
+    SELECT species_id, hindfoot_length , IFNULL(hindfoot_length, 30) AS non_null_hfl
+    FROM surveys;
+
 > ### Challenge:
 >
 > Write a query that calculates the average hind-foot length of each species,
