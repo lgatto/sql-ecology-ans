@@ -82,8 +82,8 @@ actual species names.
 
 	SELECT species.genus, species.species_id, surveys.weight
 	FROM surveys
-	JOIN species ON surveys.species_id = species.species_id;
-
+	JOIN species 
+	ON surveys.species_id = species.species_id;
 
 Joins can be combined with sorting, filtering, and aggregation.  So, if we
 wanted average mass of the individuals on each different type of treatment, we
