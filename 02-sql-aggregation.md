@@ -82,7 +82,12 @@ If we want to group by multiple fields, we give `GROUP BY` a comma separated lis
 	FROM surveys
 	GROUP BY year, species_id;
 
-Can you modify the above queries combining them into one?
+> Can you modify the above queries combining them into one?
+
+	SELECT year, species_id, ROUND(AVG(weight), 2), count(*)
+	FROM surveys
+	GROUP BY year, species_id;
+
 
 ## The `HAVING` keyword
 
